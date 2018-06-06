@@ -1,0 +1,36 @@
+print("i live at mokama");
+print("sunny and rashmi are my best frinds");
+print("python is very easy and interesting");
+print(2,3,4,2);
+print(3, 4, 5, 6,8);
+print("question 1 is completed");
+print("now time to question 2 ");
+print("acad"+"view");
+print("parent="+"papa"+"mummy");
+print("bhai"+'bahan');
+print("hindi"+"english="+"hinglish");
+print("sad"+"happy");
+x = 10
+print(x);
+y=20
+print(y);
+z=30
+print(z);
+a= int(input("take input from user"))
+print(a);
+b=int(input("enetr input from user"))
+print(b);
+c=int(input("enter from user"))
+print(c);
+print("Let's get started ");
+s="acadview"
+print(s);
+course="python"
+print(course);
+fee=5000
+print(fee);
+name="tony stark"
+salary=100000
+print('%s"%d')%(name,salary);
+
+
