@@ -1,0 +1,116 @@
+Q1:create a list using user define input?
+>>> lst=[]
+>>> lst=input("enter the string typ in lst")
+enter the string typ in lst"shalini","raj"
+>>> print(lst)
+"shalini","raj"
+>>> lst=int (input("enter the integer type"))
+enter the integer type[1,2,34]
+>>>1,2,34
+some operations on list:
+>>> lst=[1,"shalini",["chhoootttu","shreya"],3.4]
+>>> lst[1]
+'shalini'
+>>> lst[2]
+['chhoootttu', 'shreya']
+>>> lst[2][1]
+'shreya'
+>>> lst[2][0]
+'chhoootttu'
+>>> lst[1:3]
+['shalini', ['chhoootttu', 'shreya']]
+>>> lst[ :1]
+[1]
+>>> lst[2:4]
+[['chhoootttu', 'shreya'], 3.4]
+>>> lst.append(2)
+>>> print(lst.append(2))
+None
+>>> lst[2].append(2)
+>>> print(lst)
+[1, 'shalini', ['chhoootttu', 'shreya', 2], 3.4, 2, 2]
+>>> lst.replace("choootttu","kanha")
+
+Q2:add the following:
+>>> lst1=[]
+>>> lst1.append('google')
+>>> print(lst1)
+['google']
+>>> lst1.append('apple')
+>>> print(lst1)
+['google', 'apple']
+>>> lst1.append('microsoft')
+>>> print(lst1)
+['google', 'apple', 'microsoft']
+>>> lst1.append('tesla')
+>>> print(lst1)
+['google', 'apple', 'microsoft', 'tesla']
+
+Q3.count the number of object in list?
+>>> l=[1,2,2,42,43,1,43,2,"shalini","shalu","shalini"]
+>>> l.count(2)
+3
+>>> l.count(1)
+2
+>>> l.count("shalini")
+2
+>>> l.count(43)
+2
+>>> l.count(42)
+1
+
+Q4.create a list with number and sort with in ascending order?
+>>> l1=[1,23,54,32,65,37,89,76,546,0]
+>>> l1.sort()
+>>> print(l1)
+[0, 1, 23, 32, 37, 54, 65, 76, 89, 546]
+
+Q5.merge list in ascending order.
+>>> list1=[1,2,3,4,5,6]
+>>> list2=[7,8,9]
+>>> list3=list1+list2
+>>> print(list3)
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+Q6.implement stack and queue.
+>>> stack=["shalini","shan","shalu"]
+>>> print(stack)
+['shalini', 'shan', 'shalu']
+>>> print(stack.pop())
+shalu
+>>> print(stack)
+['shalini', 'shan']
+>>> print(stack.append("shammi"))
+None
+>>> print(stack)
+['shalini', 'shan', 'shammi']
+>>> queue=["ram","shayam","shanti","shani"]
+>>> print(queue)
+['ram', 'shayam', 'shanti', 'shani']
+>>> print(append("sita"))
+
+>>> queue=["ram","shayam","shanti","shani"]
+>>> print(queue)
+['ram', 'shayam', 'shanti', 'shani']
+>>> print(append("sita"))
+>>> print(queue)
+['ram', 'shayam', 'shanti', 'shani', 'sita']
+
+optional:count even and odd number?
+>>> list1=[1,2,34,5,67]
+>>> counte=0
+>>> counto=0
+>>> for x in list1:
+	          if not x % 2:
+		              counte+=1
+	          else:
+		              counto+=1
+     print(counte)
+     print(count0)
+     2
+     3
+    
+
+
+
+
