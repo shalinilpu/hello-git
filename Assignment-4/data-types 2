@@ -1,0 +1,117 @@
+Q1.tuple
+a.length of tuple
+>>> z=()
+>>> type(z)
+<class 'tuple'>
+>>> z=(2,3,3.5,6,"a","b")
+>>> print(len(z))
+6
+b.largest and smallest of tuple
+>>> z=(1,2,3,4,6)
+>>> print(max(z))
+6
+>>> print(min(z))
+1
+c.product of all element of a tuple.
+>>> t=(1,2,3,4,2)
+>>> def multiply(t):
+	total=1
+	for x in t:
+		total*=x
+	return total
+
+>>> print(multiply(t))
+48
+
+Q2.sets
+a>create 2 sets
+>>> x=set([1,2,3,4])
+>>> y=set([1,2,3,4,5,6])
+a>difference of 2 sets of above
+>>> y-x
+{5, 6}
+b.compare 2 sets?
+>>> x & y
+{1, 2, 3, 4}
+>>> x and y
+{1, 2, 3, 4, 5, 6}
+>>> x or y
+{1, 2, 3, 4}
+>>> x<y
+True
+>>> x>y
+False
+>>> x<=y
+True
+>>> x>=y
+False
+>>> x==y
+False
+c.result of intersection of 2 sets
+>>> x.intersection(y)
+{1, 2, 3, 4}
+some operations..
+>>> x.union(y)
+{1, 2, 3, 4, 5, 6}
+>>> x and y
+{1, 2, 3, 4, 5, 6}
+>>> x or y
+{1, 2, 3, 4}
+
+Q3.dictionary
+a.create a dict to store name and marks of 10 students 
+>> dict1={}
+>>> count=0
+>>> while count <10:
+	name=input("enetr your name")
+	marks=int (input("enetr your marks "))
+	if name not in dict1:
+		dict1[name]=marks
+		count=count + 1
+	else:
+
+		print("already enter")
+
+enetr your name"shalini
+enetr your marks 21
+enetr your name"shalu"
+enetr your marks 23
+enetr your name"raj"
+enetr your marks 34
+enetr your name"shanu"
+enetr your marks 34
+enetr your namerew
+enetr your marks 23
+enetr your name"sam"
+enetr your marks 32
+enetr your name"lap"
+enetr your marks 21
+enetr your name"waret"
+enetr your marks 34
+enetr your name"parth"
+enetr your marks 36
+enetr your name"gat"
+enetr your marks 32
+>>> print(dict1)
+{'"shanu"': 34, '"lap"': 21, '"gat"': 32, '"sam"': 32, '"raj"': 34, 'rew': 23, '"shalini': 21, '"parth"': 36, '"shalu"': 23, '"waret"': 34}
+b.sort dict in previous ques..
+>>> import operator
+>>> sort=sorted(dict1.items(),key=operator.itemgetter(1))
+>>> print(sort)
+[('"lap"', 21), ('"shalini', 21), ('rew', 23), ('"shalu"', 23), ('"gat"', 32), ('"sam"', 32), ('"shanu"', 34), ('"raj"', 34), ('"waret"', 34), ('"parth"', 36)]
+c>count the number of occourance of each letter in word missippi store the count of every letter in dict
+>>> def charfreq(str1):
+	dict={}
+	for n in str1:
+		keys=dict.keys()
+		if n in keys:
+			dict[n]+=1
+		else:
+			dict[n]=1
+	return dict
+
+>>> print(charfreq("missippi"))
+{'i': 3, 'm': 1, 's': 2, 'p': 2}
+>>> completd....
+>>> 
+>>> 
