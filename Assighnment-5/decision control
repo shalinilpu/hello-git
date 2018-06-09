@@ -1,0 +1,122 @@
+Q1.take a input from user to check wheather leap year or not.
+year=int(input("eter year to check wheater leap year or not"))
+if year % 4==0:
+    if year % 100==0:
+        if year %400:
+        else:
+            print("it is a leap year")
+    else:
+        print("it is a leap year")
+            
+else:
+    print("not a leap year")
+
+output:
+>>> 
+eter year to check wheater leap year or not2000
+it is a leap year
+>>>
+
+eter year to check wheater leap year or not2001
+not a leap year
+>>> 
+
+Q2.check the dimensions of square and rectangle.
+length=int(input("enetr length from input"))
+breadth=int(input("enter breadth from user"))
+a=length*length
+b=length*breadth
+ans=dimension
+if length==breadth:
+    print("dimension are of square")
+else:
+    print("dimension are of rectangle")
+
+Q3.take the input age of 3 people and determine youngest and oldest one.
+array[]
+for i in range(0,3):
+    print("enetr age of people")
+    a1=int(input("enter"))
+    array.append(a)
+if(array[0]<array[1] and array[0]<array[2]:
+   print("youngest people",array[0])
+elif(array[1]<array[0] and array[1]<array[2]):
+   print("yougest is ",array[1])
+else:
+   print("youngest is 3",array[2])
+
+    print("oldest people")
+if(array[0]>array[1] and array[0]>array[2]):
+   print("oldest people is",array[0])
+elif(array[1]>array[0] and array[1]>array[2]):
+   print("oldest people is",array[1])
+else:
+   print("oldest people",array[2])
+   
+   
+   Q4.competitor about prizes..
+   point=int(input("enetr the points of competition"))
+if(point<=50):
+    print("no prize")
+elif(point<=150)&(point>=50):
+    print("wooden dog")
+elif(point<=180)&(point>=150):
+    print("book")
+else:
+    print("chocolates")
+    output:
+    >>> 
+enetr the points of competition 27
+no prize
+>>> >>> 
+enetr the points of competition152
+book
+>>> >>> 
+enetr the points of competition 145
+wooden dog
+>>> >>> 
+enetr the points of competition200
+chocolates
+>>> 
+Q5.discount of 10%if book cost is more than 1000.judge and cost ..print cost for user.....
+quantity=int(input("enter the quantity of items"))
+if(quantity*100>1000):
+    print("total cost will be :",quantity*100-0.1*(quantity*100))
+else:
+    print("total cost",quantity*100)
+
+
+
+
+
+
+
+
+
+
+
+   
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+   
