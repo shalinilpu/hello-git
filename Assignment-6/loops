@@ -1,0 +1,112 @@
+Q1: take 10 integers from user and print it on screen.
+for u in range(0,10):
+    print(u)
+
+
+
+Q2:write an infinite loops.
+while True:
+    num=int(input("enetr an integer:"))
+    print("the double ofnum",2*num)
+ output:
+ enetr an integer:23
+the double ofnum 46
+enetr an integer:34
+the double ofnum 68
+enetr an integer:54
+the double ofnum 108
+enetr an integer:54
+the double ofnum 108
+enetr an integer:32
+the double ofnum 64
+enetr an integer:12
+the double ofnum 24
+enetr an integer:32
+the double ofnum 64
+enetr an integer:5
+the double ofnum 10
+enetr an integer:6
+the double ofnum 12
+
+
+Q3: 
+intlist=int(input("enter 10 numbers"))
+a=[]
+for i in range(0,intlist):
+    l=int(Input("enter element"))
+    a.append(l)
+print(a)
+for i in a:
+    l1=i**2
+    b=[]
+    b.append(l1)
+print(b)
+
+Q4:
+list1=[1,e,2,3,2.4,5,f,d,7,2.4]
+In=[]
+s=[]
+f=[]
+for i in range(len(list1)):
+    if type(list1[i])==int:
+            In.append(list1[i])
+    if type(list[i])==float:
+            f.append(list1[i])
+    if type(list1[i]==str:
+            s.append(list1[i])
+
+print(In)
+print(f)
+print(s)
+        
+Q5.
+l1=[]
+for i in range(1,101):
+    b=i+1
+    li.append(b)
+even=[]
+odd=[]
+for j in l1:
+    if(j%2==0):
+        even.append(j)
+    else:
+        odd.append(j)
+print("even list",even)
+print("odd",odd)
+
+
+Q6:
+pattern="*"
+for i in range(1,5):
+    print(pattern*i)
+output
+>>> 
+*
+**
+***
+****
+>>> 
+
+Q7:
+dic={"name":"shalini","class":"nothing"}
+for x in dic:
+    print(x,":",dic[x])
+    >>> 
+name :shalini
+class: nothing
+>>> 
+Q8:
+>>> l=int(input("enetr 10 element"))
+a=[]
+for i in range(0,l):
+    l1=int(input("enetr element")
+    a.append(l1)
+    print(a)
+l2=int(input("enetr elemnt to search"))
+for j in l2:
+           if(l2[j]==a[i]:
+              print(i.remove())
+
+print(a)
+
+
