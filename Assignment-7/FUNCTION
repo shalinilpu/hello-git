@@ -1,0 +1,87 @@
+Q1:create a function to calculate the area of circle by taking radius by user
+r=float(input("enter radius of circle"))
+def area_of_circle(r):
+    a = 3.14*r**2
+    return a
+print(area_of_circle(r))
+output:
+>>> 
+enter radius of circle4
+50.24
+>>> 
+
+
+Q3: write a funtion "perfect number"...........
+num = int(input("enter num "))
+def perfect_number(num):
+    sum=0
+    for x in range(1,num):
+        if num % x==0:
+            sum+=x
+    return sum == num
+print(perfect_number(num))
+    output:
+    >>> 
+enter num 6
+True
+>>>  
+enter num 9
+False
+>>> 
+
+Qq3:print multiplication table using recursion...
+n=int(input("enter num for table"))
+def mul_table(n,i=1):
+    print(n*i)
+    if i!=10:
+        mul_table(n,i+1)
+mul_table(n)
+
+>>> 
+enter num for table7
+7
+14
+21
+28
+35
+42
+49
+56
+63
+70
+>>> 
+
+Q4:write function to caculate power of a number .....
+base=int(input("enter the num"))
+exp=int(input("enetr the exponent of base"))
+def power(base,exp):
+    if(exp==1):
+        return base
+    if (exp!=1):
+        return base*power(base,exp-1)
+print(power(base,exp))
+    
+output:
+>>> 
+enter the num7
+enetr the exponent of base3
+343
+>>> 
+
+Q5:write a function to find factorial of a  num..but also store the factorial in dict....
+n=int(input("enter the num"))
+def factorial(n):
+    if(n==1):
+        return 1
+    else:
+        return n*factorial(n-1)
+dict1={}
+print(factorial(n))
+dict1={n:factorial(n)}
+print(dict1)
+output::
+>>> 
+enter the num3
+6
+{3: 6}
+>>> 
