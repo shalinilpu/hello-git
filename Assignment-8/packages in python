@@ -1,0 +1,65 @@
+Q1:what is time tuple??
+time tuple in python tells about the year(4digit), day(7) ,hour(0 to 23),minute(0 to 59),second(0 to 59),day of week(0 to 6),Day of year(1 to 366)
+import time
+time.time()
+
+Q2:write a program to get formatted time?
+>>> import time
+>>> time.asctime()
+'Thu Jun 14 10:56:31 2018'
+
+Q3:extract month from time?
+>>> import datetime
+>>> now=datetime.datetime.now()
+>>> print(now.strftime("%B"))
+June
+>>> 
+
+Q4: extract day from time..
+>>> import datetime
+>>> now=datetime.datetime.now()
+>>> print(now.strftime("%A"))
+Thursday
+
+Q5:extract 11 in 11/01/2021 from time...
+>>> import datetime
+>>> now=datetime.datetime.now()
+>>> print(now.strftime("%d"))
+14
+
+Q6:write a program to print using local method....
+>>> import time
+>>> time.localtime()
+time.struct_time(tm_year=2018, tm_mon=6, tm_mday=14, tm_hour=11, tm_min=38, tm_sec=14, tm_wday=3, tm_yday=165, tm_isdst=0)
+
+Q7:find the factorial of number input by user using maths package..
+>>> import math
+>>> n=int(input("enter num to factorial"))
+enter num to factorial6
+>>> math.factorial(n)
+720
+
+
+Q8:find the gcd of a number using user input by maths package...
+>>> import math
+>>> math.gcd(24,12)
+12
+>>> import math
+>>> m=int(input("enter no for gcd"))
+enter no for gcd68
+>>> n=int(input("enter no for gcd"))
+enter no for gcd24
+>>> math.gcd(m,n)
+4
+Q9:use os package and do the following...
+a>get current working directory..
+>>> import os
+>>> os.getcwd()
+'C:\\Users\\SHALANI KASHYAP\\AppData\\Local\\Programs\\Python\\Python36-32'
+
+b>get user environment....
+>>> import os
+>>> print(os.environ.get("HOME",'/home/username/'))
+C:\Users\SHALANI KASHYAP
+>>> 
+ 
