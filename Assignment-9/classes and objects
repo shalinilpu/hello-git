@@ -1,0 +1,89 @@
+Q1:create a circle and initialize with radius make a method getarea and circumference inside the class
+class Circle():
+    def __init__(self,r):
+        self.radius=r
+    def area(self):
+        return self.radius**2*3.14
+    def perimeter(self):
+        return 2*self.radius*3.14
+
+NewCircle=Circle(6)
+print("area is:",NewCircle.area())
+print("circumference is:",NewCircle.perimeter())
+        
+Q2:create a student class and initialize it with roll no and name.
+display :it should display all info of student.
+class Student():
+    def __init__(self,name,rollno):
+        self.name=name
+        self.rollno=rollno
+    def displaydetail(self):
+        print("details of students")
+        print("name",self.name)
+        print("rollno",self.rollno)
+
+s=Student("shalini",30)
+print(s.displaydetail())
+
+Q3:create a temprature class with fahrenheit and celsius methods...
+class temprature():
+    def __init__(self,fah,cel):
+        self.fah=fah
+        self.cel=cel
+    
+    def convert_fahrenheit(self):
+        cel=int(input("enetre the temp into celsius"))
+        self.cel=cel
+        fah=9.0/5.0*cel+32
+        print(fah)
+    def convert_celsius(self):
+        fah=int(input("enter the temp in fah"))
+        self.fah=fah
+        cel=fah-32*5.0/9.0
+        print(cel)
+t=temprature(2,4)
+print(t.convert_temprature())
+print(t.convert_celsius())
+
+Q4:create a moviesdetails class with some attribute like name ,artist,year of release and ratings...and update function...
+class MovieDetails():
+    def __init__(self,Moviename,artistname,yearofrelease,ratings):
+        self.Moviename=Moviename
+        self.artistname=artistname
+        self.yearofrelease=yearofrelease
+        self.ratings=ratings
+    def display(self):
+        print("movie name:",self.Moviename)
+        print("artistname:",self.artistname)
+        print("year of release",self.yearofrelease)
+        print("ratings:",self.ratings)
+    def update(self):
+        Moviename=input("enter the movie name")
+        self.Moviename=Moviename
+        artistname=input("enter artist name")
+        self.artistname=artistname
+m = MovieDetails("parmanu","john",2018,3)
+print(m.display())
+print(m.update())
+    Q5:create a class expendature and initialize with expen,saving,and make methods.
+    class Expendature():
+    def __init__(self,expendature,saving):
+        self.expendature=expendature
+        self.saving=saving
+    def display(self):
+        print(self.expendature)
+        print(self.saving)
+    def tsalary(self):
+        expendature=int(input("enter the amount for expand"))
+        self.expendature=expendature
+        saving=int(input("u have save from salary"))
+        self.saving=saving
+        total=expendature+saving
+        print(total)
+    def salaryd(self):
+        self.salary=salary
+        print(self.salary)
+expand=Expendature(40000,450000)
+print(expand.display())
+print(expand.tsalary())
+print(expand.salaryd())
