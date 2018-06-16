@@ -1,0 +1,99 @@
+Q1 create animal class and inherite methods of it in tiger class
+class Animal:
+    leg=4
+    eye=2
+    ears=2
+    def animal_attribute(self):
+        print("animal hs 4 legs")
+        print("animal has 2 eyes")
+        print("animal has 2 ears")
+class Tiger(Animal):
+    def eat(self):
+        print("tiger is omnivorus")
+    def sleep(self):
+        print("tiger sleeps")
+a1=Animal()
+print(a1.leg)
+print(a1.eye)
+print(a1.ears)
+print(a1.animal_attribute())
+t1=Tiger()
+print(t1.eye)
+print(t1.ears)
+print(t1.animal_attribute())
+              
+Q2.output:
+class A:
+    def f(self):
+        return self.g()
+    def g(self):
+        return A
+class B(A):
+    def g(self):
+        return B
+a=A()
+b=B()
+print(a.f())
+print(b.f())
+output:
+>>> 
+<class '__main__.A'>
+<class '__main__.B'>
+>>> 
+Q3.create a class cop.and inherits its method in mission class..
+class Cop:
+    
+    name =input("enter the name")
+    
+    age=int(input("enter the age"))
+    
+    experience=int(input("enter the experience age"))
+    
+    designation="what they know"
+    def add(self):
+        print("add more information")
+        name=input("enter the name")
+        
+    def display(self):
+        print(name)
+        print(age)
+        print(experience)
+        print(designation)
+
+class Mission(Cop):
+    def addmission(self):
+        print("new mission for public")
+c=Cop()
+m=Mission()
+print(c.name,c.age,c.experience,c.designation)
+print(c.dispay())
+print(m.name)
+print(m.addmission())
+
+Q4:create a class shape.make a method area().make another class rectangle and square and inherit it....
+class Shape:
+   leng=int(input("enter input"))
+   bred=int(input("enter bread"))
+   def area(self):
+       rectangle=leng*bred
+       square=leng*leng
+       print(rectangle)
+       print(square)
+class Rectangle(Shape):
+    def __init__(self,leng,bread):
+        self.leng=leng
+        self.bread=bread
+    def area(self):
+        return leng*bred
+class Square(Shape):
+    def __init__(self,side):
+        self.side=side
+    
+    def area(self):
+        return leng*leng
+def main():
+    rect=Rectangl(3,5)
+    print("area is"+str(rect.area()))
+    sq=Square(3)
+    print("area is"+str(sq.area()))
+          
