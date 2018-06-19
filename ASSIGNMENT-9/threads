@@ -1,0 +1,42 @@
+Q1create a thread process such that it sleeps for 5 seconds and then print out a message
+import threading
+
+def mylog():
+    print("hey")
+    threading.Timer(5.0,mylog).start()
+mylog()
+
+q2.make a thread that  prints numbers between 1-10 waits for 1 sec.
+import threading
+def hlo():
+    for i in range(1,10):
+        print(i)
+        threading.Timer(1.0,hlo)
+hlo()
+
+
+Q3:
+import time
+from threading import Thread
+def slpme(i,B):
+    time.sleep(B)
+    print("thread %i." %(i))
+    a=[0,6,8,9]
+    B=2
+    for i in a:
+        th=Thread(target=slpme,args=(i,B))
+        th.start()
+        B+=2
+        print(i)
+
+Q4:factorial of a number using thread
+import threading
+def factorial(n):
+    fact=1
+    for i in range(n,0,-1):
+        fact*=i
+    print(threading.currentThread().getName(),fact)
+n = int(input("enet for factorial"))
+t =threading.Thread(name="factorial thread",target=factorial,args=(n,))
+t.start()
+
