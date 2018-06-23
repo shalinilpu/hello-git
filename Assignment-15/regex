@@ -1,0 +1,31 @@
+Q1:
+import re
+email="zuck26@facebook.com"
+p=re.findall(r'(\w+)@([A-Z0-9]+)\.([A-Z]{2,4})',email,flags=re.I)
+print(p)
+           
+output:
+>>> 
+[('zuck26', 'facebook', 'com')]
+>>> 
+
+Q2:
+import re
+text="Betty brought a bit of butter.But the butter was so bitter.So she brought some better butter.To make the bit butter better."
+show=re.findall(r'\bB\w+',text,flags =re.I)
+print(show)
+output:
+>>> 
+['Betty', 'brought', 'bit', 'butter', 'But', 'butter', 'bitter', 'brought', 'better', 'butter', 'bit', 'butter', 'better']
+>>> 
+
+
+Q3:
+import re
+message="A,very very;irregular_sentence"
+p=re.split('[;,\s_]+',message)
+s=" "
+print(s.join(p))
+>>> 
+A very very irregular sentence
+>>> 
