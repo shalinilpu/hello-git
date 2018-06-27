@@ -1,0 +1,74 @@
+write a program using tkinterinterface to write hello world and exit button that closes the interface
+from tkinter import *
+root=Tk()
+text = Label(root, text='Hello, world!')
+text.pack()
+
+button = Button(root, text='Exit Program', command=root.destroy)
+button.pack()
+root.mainloop()
+
+
+Q2:create  a action when the button is click it wi;; display some text
+from  tkinter import *
+root=Tk()
+
+def write():
+    print("write something as message")  #to print on console
+
+button = Button(root, text='Question2 button one', command=write)
+button.pack()
+
+root.mainloop()
+
+Q3:create a frame using tkinter with any label text  and two button ,one to exit and other to change the label to some other text...
+from tkinter import *
+root1 = Tk()
+
+label = Label(root1, text='chnage this text by clicking button below')
+label.pack()
+
+
+
+def change():
+    label.config(text="changed")
+
+label_button = Button(root1, text='change label text', command= change )
+label_button.pack()
+
+label1 = Label(root1, text='\n\ntry change text ')
+label1.pack()
+
+
+def changeagn():
+    label_2["text"] = "changed it again"
+label_button2 = Button(root1, text='change label text again', command= changeagn )
+label_button2.pack()
+
+exit_button1 = Button(root1, text='Exit Program now', command=root1.destroy)
+exit_button1.pack()
+
+
+root1.mainloop()
+
+
+Q4:write a python program using tkinter interface to take an input in the gui program and print it.....
+from tkinter import *
+
+root = Tk()
+root.title("gui interface")
+
+lbl = Label(root, text="Enter text:")
+lbl.grid(column=0, row=0)
+txt = Entry(root,width=25)
+txt.grid(column=1, row=0)
+def prints():
+    data = txt.get()
+    lbl = Label(root, text="Your entered :"+data)
+    lbl.grid(column=2, row=6)
+bt = Button(root, text="show", command=prints)
+bt.grid(column=2, row=1)
+
+exit_button = Button(root, text='Exit Progr', command=root.destroy)
+exit_button.grid(column=1, row=2)
+root.mainloop()
