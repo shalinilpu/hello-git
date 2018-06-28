@@ -1,0 +1,61 @@
+Q1:phone directory
+from tkinter import *
+root = Tk()
+root.title("Phone directory")
+dict = {'shalini':"7837005156", "kalo" : "7367005156", "didu": "8051560561"}
+topframe = Frame(root)
+topframe.pack()
+scrol= Scrollbar(topframe)
+scrol.pack(side = RIGHT, fill = Y)
+mlist = Listbox(topframe, yscrollcommand = scrol.set)
+for num in dict:
+    mlist.insert(END,num)
+mlist.pack(fill = BOTH, expand = 1)
+scrol.config(command = mlist.yview)
+root.mainloop()
+
+
+
+Q2:
+from tkinter import *
+root=Tk()
+bframe = Frame(root)
+bframe.pack()
+
+
+name = StringVar()
+mob = StringVar()
+
+
+l1 = Label(bframe,text= "Name")
+l1.pack(side = LEFT)
+entry1 = Entry(bframe, textvariable = name)
+entry1.pack(side = LEFT)
+l2 = Label(bframe,text= "Mobile No.")
+l2.pack(side = LEFT)
+entry2 = Entry(bframe, textvariable = mob)
+def add_data(name,mob):
+    dict[name] = mob
+
+def show():
+    lbl = Label(bframe, text = dict)
+    lbl.pack(side = BOTTOM)
+    print(dict)
+
+
+
+addbtn = Button(bframe, text = "ADD DATA" , fg = "green", command = lambda : add_data(name.get(),mob.get()))
+addbtn.pack(side = LEFT)
+
+showbtn = Button(bframe, text = "SHOW DATA" , fg = "pink", command = show)
+showbtn.pack(side = BOTTOM)
+
+def addagain():
+    for i in dict:
+        mylist.insert(END,i)
+refreshbtn = Button(bframe, text = "ADD AGAIN", fg = "purple", command = addagain)
+refreshbtn.pack(side = BOTTOM)
+
+root.mainloop()
+
+
