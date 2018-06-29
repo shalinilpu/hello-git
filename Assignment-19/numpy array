@@ -1,0 +1,40 @@
+Q1:mean of array
+import numpy as np
+n = np.random.rand(10,5)
+print(n)
+print("Mean of elements in array: ",np.mean(n))
+
+
+Q2:standard deviation and variance
+import numpy as np
+r= np.random.rand(20,1)
+print(r)
+#standard deviation
+print("standard deviation of elemrnts in array: ",np.std(r))
+#variance
+print("variance of elemrnts in array: ",np.var(r))
+
+
+Q3:
+import numpy as np
+a = np.random.rand(10,25)
+print(a)
+b = np.random.rand(25,35)
+print(b)
+mul = np.dot(a,b)
+print("Matrix Multiplication of c and d: \n", mul)
+
+print("\n sum of elememts in multiplication array is: ", np.sum(mul))
+
+
+Q4:
+import numpy as np
+a = np.arange(1,21).reshape(20,1)
+def num(x):
+    return 1 / (1 + np.exp(-x))
+fun1 = np.vectorize(num)
+newarray = num(a)
+print("after applyin function to A: \n",newarray)
+
+
+
