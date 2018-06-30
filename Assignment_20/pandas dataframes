@@ -1,0 +1,595 @@
+# question 1
+import numpy as np
+import pandas as pd
+df = pd.DataFrame({'Name':['shalini','kalynani','vagisha','juli'],
+                      'Age':['19','18','20','19'],
+                       'mail id':['sksing@gmail.com','kalo@gmail.com','mote@gmail.com','juliet@gmail.com'],
+                        'phone no':['7837005156','7367005156','933549023','8505156231']
+                   })
+print(df)
+
+"C:\Users\SHALANI KASHYAP\PycharmProjects\untitled\venv\Scripts\python.exe" "C:\Users\SHALANI KASHYAP\PycharmProjects\untitled\Ques1gui.py"
+  Age      Name           mail id    phone no
+0  19   shalini  sksing@gmail.com  7837005156
+1  18  kalynani    kalo@gmail.com  7367005156
+2  20   vagisha    mote@gmail.com   933549023
+3  19      juli  juliet@gmail.com  8505156231
+
+#question 2
+# b>first 10 rows of dataframe
+downloaded as weather.csv
+import pandas as pd
+
+csv=pd.read_csv("./weather.csv")
+print(csv)
+
+print(csv.head(10))
+
+# ouput:
+         Date  Location  MinTemp  MaxTemp  Rainfall  Evaporation  Sunshine  \
+0   11/1/2007  Canberra      8.0     24.3       0.0          3.4       6.3   
+1   11/2/2007  Canberra     14.0     26.9       3.6          4.4       9.7   
+2   11/3/2007  Canberra     13.7     23.4       3.6          5.8       3.3   
+3   11/4/2007  Canberra     13.3     15.5      39.8          7.2       9.1   
+4   11/5/2007  Canberra      7.6     16.1       2.8          5.6      10.6   
+5   11/6/2007  Canberra      6.2     16.9       0.0          5.8       8.2   
+6   11/7/2007  Canberra      6.1     18.2       0.2          4.2       8.4   
+7   11/8/2007  Canberra      8.3     17.0       0.0          5.6       4.6   
+8   11/9/2007  Canberra      8.8     19.5       0.0          4.0       4.1   
+9  11/10/2007  Canberra      8.4     22.8      16.2          5.4       7.7   
+
+  WindGustDir  WindGustSpeed WindDir9am      ...      Humidity3pm  \
+0          NW           30.0         SW      ...               29   
+1         ENE           39.0          E      ...               36   
+2          NW           85.0          N      ...               69   
+3          NW           54.0        WNW      ...               56   
+4         SSE           50.0        SSE      ...               49   
+5          SE           44.0         SE      ...               57   
+6          SE           43.0         SE      ...               47   
+7           E           41.0         SE      ...               57   
+8           S           48.0          E      ...               48   
+9           E           31.0          S      ...               32   
+
+   Pressure9am  Pressure3pm  Cloud9am  Cloud3pm  Temp9am  Temp3pm  RainToday  \
+0       1019.7       1015.0         7         7     14.4     23.6         No   
+1       1012.4       1008.4         5         3     17.5     25.7        Yes   
+2       1009.5       1007.2         8         7     15.4     20.2        Yes   
+3       1005.5       1007.0         2         7     13.5     14.1        Yes   
+4       1018.3       1018.5         7         7     11.1     15.4        Yes   
+5       1023.8       1021.7         7         5     10.9     14.8         No   
+6       1024.6       1022.2         4         6     12.4     17.3         No   
+7       1026.2       1024.2         6         7     12.1     15.5         No   
+8       1026.1       1022.7         7         7     14.1     18.9         No   
+9       1024.1       1020.7         7         1     13.3     21.7        Yes   
+
+   RISK_MM  RainTomorrow  
+0      3.6           Yes  
+1      3.6           Yes  
+2     39.8           Yes  
+3      2.8           Yes  
+4      0.0            No  
+5      0.2            No  
+6      0.0            No  
+7      0.0            No  
+8     16.2           Yes  
+9      0.0            No  
+
+[10 rows x 24 columns]
+
+c>
+mport pandas as pd
+
+csv=pd.read_csv("./weather.csv")
+print(csv)
+
+print(csv.T)# transpose row and column
+output:
+"C:\Users\SHALANI KASHYAP\PycharmProjects\untitled\venv\Scripts\python.exe" "C:\Users\SHALANI KASHYAP\PycharmProjects\untitled\Ques1gui.py"
+           Date  Location  MinTemp  MaxTemp  Rainfall  Evaporation  Sunshine  \
+0     11/1/2007  Canberra      8.0     24.3       0.0          3.4       6.3   
+1     11/2/2007  Canberra     14.0     26.9       3.6          4.4       9.7   
+2     11/3/2007  Canberra     13.7     23.4       3.6          5.8       3.3   
+3     11/4/2007  Canberra     13.3     15.5      39.8          7.2       9.1   
+4     11/5/2007  Canberra      7.6     16.1       2.8          5.6      10.6   
+5     11/6/2007  Canberra      6.2     16.9       0.0          5.8       8.2   
+6     11/7/2007  Canberra      6.1     18.2       0.2          4.2       8.4   
+7     11/8/2007  Canberra      8.3     17.0       0.0          5.6       4.6   
+8     11/9/2007  Canberra      8.8     19.5       0.0          4.0       4.1   
+9    11/10/2007  Canberra      8.4     22.8      16.2          5.4       7.7   
+10   11/11/2007  Canberra      9.1     25.2       0.0          4.2      11.9   
+11   11/12/2007  Canberra      8.5     27.3       0.2          7.2      12.5   
+12   11/13/2007  Canberra     10.1     27.9       0.0          7.2      13.0   
+13   11/14/2007  Canberra     12.1     30.9       0.0          6.2      12.4   
+14   11/15/2007  Canberra     10.1     31.2       0.0          8.8      13.1   
+15   11/16/2007  Canberra     12.4     32.1       0.0          8.4      11.1   
+16   11/17/2007  Canberra     13.8     31.2       0.0          7.2       8.4   
+17   11/18/2007  Canberra     11.7     30.0       1.2          7.2      10.1   
+18   11/19/2007  Canberra     12.4     32.3       0.6          7.4      13.0   
+19   11/20/2007  Canberra     15.6     33.4       0.0          8.0      10.4   
+20   11/21/2007  Canberra     15.3     33.4       0.0          8.8       9.5   
+21   11/22/2007  Canberra     16.4     19.4       0.4          9.2       0.0   
+22   11/23/2007  Canberra     12.8     18.5      25.8          2.8       0.6   
+23   11/24/2007  Canberra     12.0     24.3       0.4          1.2       7.5   
+24   11/25/2007  Canberra     15.4     28.4       0.0          4.4       8.1   
+25   11/26/2007  Canberra     15.6     26.9       0.0          6.8       8.9   
+26   11/27/2007  Canberra     13.3     22.2       0.2          6.6       2.3   
+27   11/28/2007  Canberra     12.9     28.0       0.0          4.4      10.7   
+28   11/29/2007  Canberra     15.1     24.3       0.0          7.0       0.4   
+29   11/30/2007  Canberra     13.6     24.1       0.4          2.6       0.5   
+..          ...       ...      ...      ...       ...          ...       ...   
+226   6/14/2008  Canberra      1.0     11.8       0.0          2.2       7.2   
+227   6/15/2008  Canberra      2.1     14.7       0.0          2.6       8.2   
+228   6/16/2008  Canberra      6.4     16.9       0.0          2.6       5.9   
+229   6/17/2008  Canberra      5.4     15.5       0.0          1.6       5.8   
+230   6/18/2008  Canberra      0.4     15.5       0.0          1.0       4.7   
+231   6/19/2008  Canberra      4.0     15.9       0.0          0.6       2.0   
+232   6/20/2008  Canberra      8.4     11.7       4.8          0.6       0.0   
+233   6/21/2008  Canberra      0.4     13.9       0.6          0.8       7.7   
+234   6/22/2008  Canberra      4.2     14.0       0.0          1.4       7.6   
+235   6/23/2008  Canberra      0.9     12.9       0.0          2.0       6.8   
+236   6/24/2008  Canberra      0.8     13.0       0.0          1.4       4.1   
+237   6/25/2008  Canberra      4.3     12.6       0.0          2.0       9.0   
+238   6/26/2008  Canberra      6.3     11.8       0.0          2.6       6.5   
+239   6/27/2008  Canberra      3.5     14.3       0.0          3.4       8.9   
+240   6/28/2008  Canberra     -1.5     14.8       0.0          2.2       8.0   
+241   6/29/2008  Canberra      1.2     16.0       0.0          1.4       6.1   
+242   6/30/2008  Canberra      0.5     15.4       0.0          2.4       6.4   
+243    7/1/2008  Canberra      5.3     11.7       2.0          3.6       5.6   
+244    7/2/2008  Canberra      6.6     13.1       0.2          2.8       8.2   
+245    7/3/2008  Canberra     -1.6     11.5       0.0          2.8       8.9   
+246    7/4/2008  Canberra     -3.1     12.0       0.0          1.8       3.9   
+247    7/5/2008  Canberra     -0.1     14.2       0.0          1.4       7.0   
+248    7/6/2008  Canberra     -0.6     14.0       0.0          1.2       7.1   
+249    7/7/2008  Canberra      3.0     11.1       0.8          1.4       0.2   
+250    7/8/2008  Canberra      2.9      9.5      16.8          1.4       6.5   
+251    7/9/2008  Canberra     -1.3      8.8       0.0          0.8       2.8   
+252   7/10/2008  Canberra      1.8      8.7       0.0          1.8       1.2   
+253   7/11/2008  Canberra      2.9      8.4       1.6          1.4       7.7   
+254   7/12/2008  Canberra     -2.6     11.1       0.2          1.4       6.5   
+255   7/13/2008  Canberra      0.5     11.0       0.0          1.0       0.9   
+
+    WindGustDir  WindGustSpeed WindDir9am      ...      Humidity3pm  \
+0            NW           30.0         SW      ...               29   
+1           ENE           39.0          E      ...               36   
+2            NW           85.0          N      ...               69   
+3            NW           54.0        WNW      ...               56   
+4           SSE           50.0        SSE      ...               49   
+5            SE           44.0         SE      ...               57   
+6            SE           43.0         SE      ...               47   
+7             E           41.0         SE      ...               57   
+8             S           48.0          E      ...               48   
+9             E           31.0          S      ...               32   
+10            N           30.0         SE      ...               34   
+11            E           41.0          E      ...               35   
+12          WNW           30.0          S      ...               29   
+13           NW           44.0        WNW      ...               20   
+14           NW           41.0          S      ...               16   
+15            E           46.0         SE      ...               22   
+16          ESE           44.0        WSW      ...               23   
+17            S           52.0         SW      ...               26   
+18            E           39.0        NNE      ...               25   
+19           NE           33.0        NNW      ...               27   
+20          WNW           59.0          N      ...               26   
+21            E           26.0        ENE      ...               72   
+22          ESE           28.0          S      ...               79   
+23          NNE           26.0        WSW      ...               57   
+24          ENE           33.0        SSE      ...               31   
+25            E           41.0          E      ...               48   
+26          ENE           39.0          E      ...               55   
+27            S           52.0          S      ...               31   
+28           SE           39.0         SE      ...               80   
+29          NNW           30.0        SSW      ...               49   
+..          ...            ...        ...      ...              ...   
+226           S           48.0         NW      ...               49   
+227           S           43.0          S      ...               57   
+228         SSW           26.0        SSW      ...               51   
+229         NNE           20.0        SSW      ...               58   
+230           N           13.0          N      ...               70   
+231         NNW           17.0         SE      ...               63   
+232           W           26.0        WNW      ...               86   
+233         WNW           41.0          E      ...               59   
+234          NW           33.0        NNW      ...               44   
+235          NW           24.0          W      ...               53   
+236         WNW           41.0          S      ...               69   
+237          NW           46.0        NaN      ...               54   
+238         WNW           63.0        NNW      ...               48   
+239         NNW           35.0          N      ...               51   
+240          NW           15.0          N      ...               41   
+241         NNW           31.0          S      ...               38   
+242           W           70.0         NW      ...               68   
+243          NW           78.0         NW      ...               56   
+244         WNW           61.0        NNW      ...               53   
+245           N           31.0        ESE      ...               53   
+246         ESE           35.0        SSW      ...               52   
+247           W           13.0        NaN      ...               55   
+248          NW           41.0        WNW      ...               59   
+249           W           35.0        NaN      ...               96   
+250          NW           35.0        NaN      ...               72   
+251         WNW           39.0         NW      ...               68   
+252          NW           65.0         NW      ...               85   
+253          NW           59.0         NW      ...               66   
+254           N           20.0          E      ...               54   
+255         NNW           31.0        NaN      ...               69   
+
+     Pressure9am  Pressure3pm  Cloud9am  Cloud3pm  Temp9am  Temp3pm  \
+0         1019.7       1015.0         7         7     14.4     23.6   
+1         1012.4       1008.4         5         3     17.5     25.7   
+2         1009.5       1007.2         8         7     15.4     20.2   
+3         1005.5       1007.0         2         7     13.5     14.1   
+4         1018.3       1018.5         7         7     11.1     15.4   
+5         1023.8       1021.7         7         5     10.9     14.8   
+6         1024.6       1022.2         4         6     12.4     17.3   
+7         1026.2       1024.2         6         7     12.1     15.5   
+8         1026.1       1022.7         7         7     14.1     18.9   
+9         1024.1       1020.7         7         1     13.3     21.7   
+10        1024.4       1021.1         1         2     14.6     24.0   
+11        1023.8       1019.9         0         3     16.8     26.0   
+12        1022.0       1017.1         0         1     17.0     27.1   
+13        1017.3       1013.1         1         4     19.7     30.7   
+14        1018.2       1013.7         0         1     18.7     30.4   
+15        1017.9       1012.8         0         3     19.1     30.7   
+16        1014.4       1009.8         7         6     20.2     29.8   
+17        1016.4       1013.0         1         5     20.1     28.6   
+18        1017.1       1013.3         1         3     20.2     31.2   
+19        1018.5       1013.7         0         1     22.8     32.0   
+20        1012.4       1006.5         1         5     22.2     32.8   
+21        1010.7       1008.9         8         8     16.5     18.3   
+22        1014.0       1014.9         8         8     14.0     16.8   
+23        1020.7       1019.2         7         5     17.8     22.8   
+24        1022.4       1018.6         8         2     16.8     27.3   
+25        1019.7       1016.5         2         4     19.8     25.1   
+26        1021.0       1018.6         7         7     16.5     21.2   
+27        1019.2       1014.8         5         7     18.8     26.7   
+28        1019.0       1017.1         7         7     18.9     19.7   
+29        1017.2       1013.3         8         7     17.3     23.2   
+..           ...          ...       ...       ...      ...      ...   
+226       1025.7       1025.6         4         1      6.5     11.0   
+227       1029.0       1026.3         1         2      9.0     13.8   
+228       1027.8       1024.8         7         2      9.5     16.0   
+229       1028.6       1025.5         7         1      9.4     14.9   
+230       1026.7       1023.5         5         7      4.0     15.0   
+231       1022.5       1019.7         8         7      8.4     14.8   
+232       1021.2       1019.2         8         7      9.7     11.3   
+233       1023.0       1021.0         3         6      4.2     12.1   
+234       1026.4       1025.7         5         4      8.8     12.5   
+235       1025.1       1022.1         7         7      5.5     12.3   
+236       1028.2       1024.2         8         6      4.3     11.7   
+237       1026.3       1021.9         3         1      7.8     11.3   
+238       1018.7       1020.4         6         1      7.0     11.5   
+239       1027.8       1025.0         1         1      6.7     12.7   
+240       1029.1       1026.0         4         3      2.1     14.5   
+241       1024.6       1020.9         7         6      6.5     14.6   
+242       1017.2       1010.2         1         7      9.7     12.9   
+243       1012.1       1012.3         3         1      6.9     11.1   
+244       1013.5       1014.0         5         1     10.6     12.3   
+245       1024.3       1021.9         1         1      3.0     11.1   
+246       1030.5       1030.0         1         6      5.9     10.2   
+247       1032.9       1028.9         1         2      4.7     12.6   
+248       1030.0       1026.3         5         5      3.7     13.6   
+249       1024.4       1021.1         7         8      6.3      8.6   
+250       1021.6       1019.6         6         6      5.5      7.4   
+251       1020.0       1016.8         7         6      1.8      8.0   
+252       1014.6       1010.5         7         7      6.0      6.9   
+253       1016.7       1018.2         7         3      5.5      7.1   
+254       1027.1       1022.7         1         7      0.8      9.9   
+255       1024.4       1021.9         7         7      2.8     10.7   
+
+     RainToday  RISK_MM  RainTomorrow  
+0           No      3.6           Yes  
+1          Yes      3.6           Yes  
+2          Yes     39.8           Yes  
+3          Yes      2.8           Yes  
+4          Yes      0.0            No  
+5           No      0.2            No  
+6           No      0.0            No  
+7           No      0.0            No  
+8           No     16.2           Yes  
+9          Yes      0.0            No  
+10          No      0.2            No  
+11          No      0.0            No  
+12          No      0.0            No  
+13          No      0.0            No  
+14          No      0.0            No  
+15          No      0.0            No  
+16          No      1.2           Yes  
+17         Yes      0.6            No  
+18          No      0.0            No  
+19          No      0.0            No  
+20          No      0.4            No  
+21          No     25.8           Yes  
+22         Yes      0.4            No  
+23          No      0.0            No  
+24          No      0.0            No  
+25          No      0.2            No  
+26          No      0.0            No  
+27          No      0.0            No  
+28          No      0.4            No  
+29          No     22.6           Yes  
+..         ...      ...           ...  
+226         No      0.0            No  
+227         No      0.0            No  
+228         No      0.0            No  
+229         No      0.0            No  
+230         No      0.0            No  
+231         No      4.8           Yes  
+232        Yes      0.6            No  
+233         No      0.0            No  
+234         No      0.0            No  
+235         No      0.0            No  
+236         No      0.0            No  
+237         No      0.0            No  
+238         No      0.0            No  
+239         No      0.0            No  
+240         No      0.0            No  
+241         No      0.0            No  
+242         No      2.0           Yes  
+243        Yes      0.2            No  
+244         No      0.0            No  
+245         No      0.0            No  
+246         No      0.0            No  
+247         No      0.0            No  
+248         No      0.8            No  
+249         No     16.8           Yes  
+250        Yes      0.0            No  
+251         No      0.0            No  
+252         No      1.6           Yes  
+253        Yes      0.2            No  
+254         No      0.0            No  
+255         No      0.0            No  
+
+[256 rows x 24 columns]
+                     0          1          2          3          4    \
+Date           11/1/2007  11/2/2007  11/3/2007  11/4/2007  11/5/2007   
+Location        Canberra   Canberra   Canberra   Canberra   Canberra   
+MinTemp                8         14       13.7       13.3        7.6   
+MaxTemp             24.3       26.9       23.4       15.5       16.1   
+Rainfall               0        3.6        3.6       39.8        2.8   
+Evaporation          3.4        4.4        5.8        7.2        5.6   
+Sunshine             6.3        9.7        3.3        9.1       10.6   
+WindGustDir           NW        ENE         NW         NW        SSE   
+WindGustSpeed         30         39         85         54         50   
+WindDir9am            SW          E          N        WNW        SSE   
+WindDir3pm            NW          W        NNE          W        ESE   
+WindSpeed9am           6          4          6         30         20   
+WindSpeed3pm          20         17          6         24         28   
+Humidity9am           68         80         82         62         68   
+Humidity3pm           29         36         69         56         49   
+Pressure9am       1019.7     1012.4     1009.5     1005.5     1018.3   
+Pressure3pm         1015     1008.4     1007.2       1007     1018.5   
+Cloud9am               7          5          8          2          7   
+Cloud3pm               7          3          7          7          7   
+Temp9am             14.4       17.5       15.4       13.5       11.1   
+Temp3pm             23.6       25.7       20.2       14.1       15.4   
+RainToday             No        Yes        Yes        Yes        Yes   
+RISK_MM              3.6        3.6       39.8        2.8          0   
+RainTomorrow         Yes        Yes        Yes        Yes         No   
+
+                     5          6          7          8           9    \
+Date           11/6/2007  11/7/2007  11/8/2007  11/9/2007  11/10/2007   
+Location        Canberra   Canberra   Canberra   Canberra    Canberra   
+MinTemp              6.2        6.1        8.3        8.8         8.4   
+MaxTemp             16.9       18.2         17       19.5        22.8   
+Rainfall               0        0.2          0          0        16.2   
+Evaporation          5.8        4.2        5.6          4         5.4   
+Sunshine             8.2        8.4        4.6        4.1         7.7   
+WindGustDir           SE         SE          E          S           E   
+WindGustSpeed         44         43         41         48          31   
+WindDir9am            SE         SE         SE          E           S   
+WindDir3pm             E        ESE          E        ENE         ESE   
+WindSpeed9am          20         19         11         19           7   
+WindSpeed3pm          24         26         24         17           6   
+Humidity9am           70         63         65         70          82   
+Humidity3pm           57         47         57         48          32   
+Pressure9am       1023.8     1024.6     1026.2     1026.1      1024.1   
+Pressure3pm       1021.7     1022.2     1024.2     1022.7      1020.7   
+Cloud9am               7          4          6          7           7   
+Cloud3pm               5          6          7          7           1   
+Temp9am             10.9       12.4       12.1       14.1        13.3   
+Temp3pm             14.8       17.3       15.5       18.9        21.7   
+RainToday             No         No         No         No         Yes   
+RISK_MM              0.2          0          0       16.2           0   
+RainTomorrow          No         No         No        Yes          No   
+
+                 ...           246       247       248       249       250  \
+Date             ...      7/4/2008  7/5/2008  7/6/2008  7/7/2008  7/8/2008   
+Location         ...      Canberra  Canberra  Canberra  Canberra  Canberra   
+MinTemp          ...          -3.1      -0.1      -0.6         3       2.9   
+MaxTemp          ...            12      14.2        14      11.1       9.5   
+Rainfall         ...             0         0         0       0.8      16.8   
+Evaporation      ...           1.8       1.4       1.2       1.4       1.4   
+Sunshine         ...           3.9         7       7.1       0.2       6.5   
+WindGustDir      ...           ESE         W        NW         W        NW   
+WindGustSpeed    ...            35        13        41        35        35   
+WindDir9am       ...           SSW       NaN       WNW       NaN       NaN   
+WindDir3pm       ...            NE       WNW       NNW         N        NW   
+WindSpeed9am     ...             4       NaN         2         0         0   
+WindSpeed3pm     ...            13         2        22        13        15   
+Humidity9am      ...            80        81        86        99        93   
+Humidity3pm      ...            52        55        59        96        72   
+Pressure9am      ...        1030.5    1032.9      1030    1024.4    1021.6   
+Pressure3pm      ...          1030    1028.9    1026.3    1021.1    1019.6   
+Cloud9am         ...             1         1         5         7         6   
+Cloud3pm         ...             6         2         5         8         6   
+Temp9am          ...           5.9       4.7       3.7       6.3       5.5   
+Temp3pm          ...          10.2      12.6      13.6       8.6       7.4   
+RainToday        ...            No        No        No        No       Yes   
+RISK_MM          ...             0         0       0.8      16.8         0   
+RainTomorrow     ...            No        No        No       Yes        No   
+
+                    251        252        253        254        255  
+Date           7/9/2008  7/10/2008  7/11/2008  7/12/2008  7/13/2008  
+Location       Canberra   Canberra   Canberra   Canberra   Canberra  
+MinTemp            -1.3        1.8        2.9       -2.6        0.5  
+MaxTemp             8.8        8.7        8.4       11.1         11  
+Rainfall              0          0        1.6        0.2          0  
+Evaporation         0.8        1.8        1.4        1.4          1  
+Sunshine            2.8        1.2        7.7        6.5        0.9  
+WindGustDir         WNW         NW         NW          N        NNW  
+WindGustSpeed        39         65         59         20         31  
+WindDir9am           NW         NW         NW          E        NaN  
+WindDir3pm           NW         NW        WNW        NNW         NW  
+WindSpeed9am          9         31         20          2          0  
+WindSpeed3pm         15         35         31          7         15  
+Humidity9am          95         83         76         87         92  
+Humidity3pm          68         85         66         54         69  
+Pressure9am        1020     1014.6     1016.7     1027.1     1024.4  
+Pressure3pm      1016.8     1010.5     1018.2     1022.7     1021.9  
+Cloud9am              7          7          7          1          7  
+Cloud3pm              6          7          3          7          7  
+Temp9am             1.8          6        5.5        0.8        2.8  
+Temp3pm               8        6.9        7.1        9.9       10.7  
+RainToday            No         No        Yes         No         No  
+RISK_MM               0        1.6        0.2          0          0  
+RainTomorrow         No        Yes         No         No         No  
+
+[24 rows x 256 columns]
+
+
+a>5 rows of dataframe...
+import pandas as pd
+
+csv=pd.read_csv("./weather.csv")
+print(csv)
+
+print(csv.head(5))
+# ouput:
+     RISK_MM  RainTomorrow  
+0      3.6           Yes  
+1      3.6           Yes  
+2     39.8           Yes  
+3      2.8           Yes  
+4      0.0            No  
+
+[5 rows x 24 columns]
+   Pressure9am  Pressure3pm  Cloud9am  Cloud3pm  Temp9am  Temp3pm  RainToday  \
+0       1019.7       1015.0         7         7     14.4     23.6         No   
+1       1012.4       1008.4         5         3     17.5     25.7        Yes   
+2       1009.5       1007.2         8         7     15.4     20.2        Yes   
+3       1005.5       1007.0         2         7     13.5     14.1        Yes   
+4       1018.3       1018.5         7         7     11.1     15.4        Yes   
+
+        Date  Location  MinTemp  MaxTemp  Rainfall  Evaporation  Sunshine  \
+0  11/1/2007  Canberra      8.0     24.3       0.0          3.4       6.3   
+1  11/2/2007  Canberra     14.0     26.9       3.6          4.4       9.7   
+2  11/3/2007  Canberra     13.7     23.4       3.6          5.8       3.3   
+3  11/4/2007  Canberra     13.3     15.5      39.8          7.2       9.1   
+4  11/5/2007  Canberra      7.6     16.1       2.8          5.6      10.6   
+
+  WindGustDir  WindGustSpeed WindDir9am      ...      Humidity3pm  \
+0          NW           30.0         SW      ...               29   
+1         ENE           39.0          E      ...               36   
+2          NW           85.0          N      ...               69   
+3          NW           54.0        WNW      ...               56   
+4         SSE           50.0        SSE      ...               49   
+
+# axes for row axis label and column axis label only for member
+import pandas as pd
+
+csv=pd.read_csv("./weather.csv")
+print(csv)
+
+print(csv.axes)
+# output
+[256 rows x 24 columns]
+[RangeIndex(start=0, stop=256, step=1), Index(['Date', 'Location', 'MinTemp', 'MaxTemp', 'Rainfall', 'Evaporation',
+       'Sunshine', 'WindGustDir', 'WindGustSpeed', 'WindDir9am', 'WindDir3pm',
+       'WindSpeed9am', 'WindSpeed3pm', 'Humidity9am', 'Humidity3pm',
+       'Pressure9am', 'Pressure3pm', 'Cloud9am', 'Cloud3pm', 'Temp9am',
+       'Temp3pm', 'RainToday', 'RISK_MM', 'RainTomorrow'],
+  dtype='object')]
+  
+  #dtypes return dtypes for object
+  import pandas as pd
+
+csv=pd.read_csv("./weather.csv")
+print(csv)
+
+print(csv.dtypes)
+
+#output
+[256 rows x 24 columns]
+Date              object
+Location          object
+MinTemp          float64
+MaxTemp          float64
+Rainfall         float64
+Evaporation      float64
+Sunshine         float64
+WindGustDir       object
+WindGustSpeed    float64
+WindDir9am        object
+WindDir3pm        object
+WindSpeed9am     float64
+WindSpeed3pm       int64
+Humidity9am        int64
+Humidity3pm        int64
+Pressure9am      float64
+Pressure3pm      float64
+Cloud9am           int64
+Cloud3pm           int64
+Temp9am          float64
+Temp3pm          float64
+RainToday         object
+RISK_MM          float64
+RainTomorrow      object
+dtype: object
+
+Process finished with exit code 0
+
+
+# d>last 5 rows
+
+import pandas as pd
+
+csv=pd.read_csv("./weather.csv")
+print(csv)
+
+print(csv.tail(5))
+
+output:
+
+247         No      0.0            No  
+248         No      0.8            No  
+249         No     16.8           Yes  
+250        Yes      0.0            No  
+251         No      0.0            No  
+252         No      1.6           Yes  
+253        Yes      0.2            No  
+254         No      0.0            No  
+255         No      0.0            No  
+
+[256 rows x 24 columns]
+          Date  Location  MinTemp  MaxTemp  Rainfall  Evaporation  Sunshine  \
+251   7/9/2008  Canberra     -1.3      8.8       0.0          0.8       2.8   
+252  7/10/2008  Canberra      1.8      8.7       0.0          1.8       1.2   
+253  7/11/2008  Canberra      2.9      8.4       1.6          1.4       7.7   
+254  7/12/2008  Canberra     -2.6     11.1       0.2          1.4       6.5   
+255  7/13/2008  Canberra      0.5     11.0       0.0          1.0       0.9   
+
+    WindGustDir  WindGustSpeed WindDir9am      ...      Humidity3pm  \
+251         WNW           39.0         NW      ...               68   
+252          NW           65.0         NW      ...               85   
+253          NW           59.0         NW      ...               66   
+254           N           20.0          E      ...               54   
+255         NNW           31.0        NaN      ...               69   
+
+     Pressure9am  Pressure3pm  Cloud9am  Cloud3pm  Temp9am  Temp3pm  \
+251       1020.0       1016.8         7         6      1.8      8.0   
+252       1014.6       1010.5         7         7      6.0      6.9   
+253       1016.7       1018.2         7         3      5.5      7.1   
+254       1027.1       1022.7         1         7      0.8      9.9   
+255       1024.4       1021.9         7         7      2.8     10.7   
+
+     RainToday  RISK_MM  RainTomorrow  
+251         No      0.0            No  
+252         No      1.6           Yes  
+253        Yes      0.2            No  
+254         No      0.0            No  
+255         No      0.0            No  
+
+[5 rows x 24 columns]
+
+
+
+
+
